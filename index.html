@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Submit your honest feedback for your teachers. Rate them on teaching quality, doubt clarification, and command on subject." />
+  <title>Teacher Feedback System — Provide Feedback</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="index.html">
+      <div class="logo-icon">TF</div>
+      <div>
+        <span class="brand-text">University Portal</span>
+        <span class="brand-sub">Teacher Feedback System</span>
+      </div>
+    </a>
+    <div class="navbar-nav">
+      <a class="nav-link active" href="index.html">&#128203; Provide Feedback</a>
+      <a class="nav-link" href="summary.html">&#128202; Summary</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Faculty Assessments</h1>
+    <p>Please provide your honest and constructive feedback for your instructors.
+       Your assessments remain confidential and help maintain academic excellence.</p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <div id="teachers-container">
+      <!-- Teacher cards injected by app.js -->
+      <noscript>
+        <p style="text-align:center;color:red;margin:40px 0">
+          JavaScript is required to use this feedback system.
+          Please enable JavaScript in your browser.
+        </p>
+      </noscript>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    Teacher Feedback System &mdash; All data is stored locally in your browser.
+  </footer>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container"></div>
+
+  <!-- SCRIPTS (data.js must load before app.js) -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

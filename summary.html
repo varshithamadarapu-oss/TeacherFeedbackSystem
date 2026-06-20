@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="View aggregated feedback and average ratings for all teachers." />
+  <title>Teacher Feedback System — Summary</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="index.html">
+      <div class="logo-icon">TF</div>
+      <div>
+        <span class="brand-text">University Portal</span>
+        <span class="brand-sub">Teacher Feedback System</span>
+      </div>
+    </a>
+    <div class="navbar-nav">
+      <a class="nav-link" href="index.html">&#128203; Provide Feedback</a>
+      <a class="nav-link active" href="summary.html">&#128202; Summary</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Feedback Summary</h1>
+    <p>Aggregated ratings and comments for all faculty members.
+       Averages are calculated across all submitted responses.</p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-submissions">0</div>
+        <div class="stat-label">Total Submissions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-teachers">0</div>
+        <div class="stat-label">Teachers Rated</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-avg">—</div>
+        <div class="stat-label">Overall Avg (/ 5)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-comments">0</div>
+        <div class="stat-label">Comments Left</div>
+      </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+      <label for="teacher-filter">Filter by teacher:</label>
+      <select id="teacher-filter" onchange="filterByTeacher()">
+        <option value="">All Teachers</option>
+        <!-- Options injected by summary.js -->
+      </select>
+      <button class="btn-clear" onclick="clearAllData()">&#128465; Clear All Data</button>
+    </div>
+
+    <!-- SUMMARY CARDS -->
+    <div id="summary-container">
+      <!-- Injected by summary.js -->
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    Teacher Feedback System &mdash; All data is stored locally in your browser.
+  </footer>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/data.js"></script>
+  <script src="js/summary.js"></script>
+</body>
+</html>
